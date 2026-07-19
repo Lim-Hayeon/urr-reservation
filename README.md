@@ -1,4 +1,4 @@
-# 🍽️ URR - 우르르 다같이 예약하기
+<img width="706" height="336" alt="image" src="https://github.com/user-attachments/assets/1212a6a1-9d2a-4f91-96c0-9206a5627664" /># 🍽️ URR - 우르르 다같이 예약하기
 
 여러 명이 함께 가는 모임 예약을, 인원수에 맞는 메뉴·최소주문 규칙까지 한 번에 관리하는 그룹 예약 서비스입니다.
 
@@ -27,23 +27,30 @@
 | 기타 | Lombok, Bean Validation, H2 Console |
 
 ## 📁 프로젝트 구조
-reservation/
-└── src/main/java/com/hayeon/reservation/
-├── controller/         # API 엔드포인트
-├── service/            # 비즈니스 로직 (예약, 매장, Notion 동기화)
-├── entity/             # Store, Slot, Menu, Reservation, MinOrderRule 등
-├── repository/         # JPA Repository
-├── dto/                # 요청/응답 DTO (store, reservation, admin)
-├── common/             # 공통 응답 포맷, 예외 처리
-└── config/             # CORS, Async 설정
+
+```
+reservation/  
+└── src/main/java/com/hayeon/reservation/  
+    ├── controller/         # API 엔드포인트  
+    ├── service/            # 비즈니스 로직 (예약, 매장, Notion 동기화)  
+    ├── entity/             # Store, Slot, Menu, Reservation, MinOrderRule 등  
+    ├── repository/         # JPA Repository  
+    ├── dto/                # 요청/응답 DTO (store, reservation, admin)  
+    ├── common/             # 공통 응답 포맷, 예외 처리  
+    └── config/             # CORS, Async 설정  
+ ```
 
 ### 도메인 모델
+
+```text
 Store (매장)
-├── Slot (예약 가능 시간대)
-├── Menu (메뉴, 필수 여부 포함)
-└── MinOrderRule (인원수 구간별 최소주문 규칙)
+ ├── Slot (예약 가능 시간대)
+ ├── Menu (메뉴, 필수 여부 포함)
+ └── MinOrderRule (인원수 구간별 최소주문 규칙)
+
 Reservation (예약)
-└── ReservationMenu (예약에 포함된 메뉴 목록)
+ └── ReservationMenu (예약에 포함된 메뉴 목록)
+```
 
 ## 🔌 API
 
